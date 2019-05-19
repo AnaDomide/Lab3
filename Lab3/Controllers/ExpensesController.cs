@@ -86,7 +86,12 @@ namespace Lab3.Controllers
         {
             expenseService.Create(expense);
         }
-
+        /// <summary>
+        /// Update an expense
+        /// </summary>
+        /// <param name="id">Id to be updated</param>
+        /// <param name="expense"></param>
+        /// <returns></returns>
         // PUT: api/Expenses/5
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(400)]
@@ -97,9 +102,14 @@ namespace Lab3.Controllers
             return Ok(result);
         }
 
+        /// <summary>
+        /// Delete an expense
+        /// </summary>
+        /// <param name="id">Id to be deleted</param>
+        /// <returns></returns>
         // DELETE: api/ApiWithActions/5
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(400)]
+        [ProducesResponseType(404)]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
