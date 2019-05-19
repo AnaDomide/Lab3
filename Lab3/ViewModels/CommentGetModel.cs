@@ -20,10 +20,9 @@ namespace Lab3.ViewModels
                 Id = comment.Id,
                 Text = comment.Text,
                 Important = comment.Important,
-                ExpenseId = comment.ExpenseId
+                //ExpenseId = comment.ExpenseId
             };
         }
-
 
     }
 }
